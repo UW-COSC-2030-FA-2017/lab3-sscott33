@@ -26,7 +26,7 @@ int main() {
     //     cin >> n;
     //
     //     for (long i = 1; i <= n; i++) {
-    //         sum += i;
+    //         sum += i;        // could be made more efficient with "sum = (n * (n + 1.0)) / 2.0" casted as an int
     //     }
     //
     //     cout << "The sum is " << sum << endl;
@@ -65,8 +65,47 @@ int main() {
 //         cout << endl;
 //     } while (yesno == 'y' || yesno == 'Y');
 //
-//     return 0;
+
+///////////////////////////////////////////////////////////
+// part 7
+// due to the definition of floats, fractional decimal values are not always properly represented;
+    // instead, many umbers are very close approximations for the intended value.
+    // while 0.2 is representable, many of the numbers which it is used to increment are not
+    // the issue lies in that floats are used rather than doubles, which are more suited to this situation
+
+// cout.precision(8);
+//
+// for (float i = 3.4; i < 4.4; i += 0.2)
+// {
+// cout << "i = " << i << endl;
 // }
+//
+// float fourPointFour = 4.4, zeroPointTwo = 0.2;
+// cout << fourPointFour << endl;
+// cout << zeroPointTwo;
+
+
+///////////////////////////////////////////////////////////
+// part 8
+// no issues in the calculations or the loop execution occured with the following code
+
+cout.precision(8);
+
+for (double i = 3.4; i < 4.4; i += 0.2)
+{
+cout << "i = " << i << endl;
+}
+
+double fourPointFour = 4.4, zeroPointTwo = 0.2;
+cout << fourPointFour << endl;
+cout << zeroPointTwo;
+
+
+
+
+
+    return 0;
+}
 
 
 // double factorial(long n) {
